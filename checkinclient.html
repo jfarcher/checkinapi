@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title></title>
+</head>
+ 
+<body>
+ 
+  <script>
+window.onload = function start() {
+poll();
+}
+function poll() {
+window.setInterval(function () {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://127.0.0.1:5000/pa-lib/api/v1.0/checkin', true);
+  xhr.send();
+  }, 5000);
+}
+
+  </script>
+</body>
+ 
+</html>
